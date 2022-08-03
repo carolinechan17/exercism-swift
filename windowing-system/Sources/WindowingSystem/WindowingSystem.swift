@@ -41,4 +41,24 @@ class Window {
         
         self.position.moveTo(newX: x, newY: y)
     }
+    
+    func update(title: String){
+        self.title = title
+    }
+    
+    func update(text: String?){
+        contents = text
+    }
+    
+    func display() -> String {
+        var addition : String
+        
+        if(contents == nil){
+            addition = "[This window intentionally left blank]"
+        }else{
+            addition = contents!
+        }
+        
+        return "\(title)\nPosition: (\(position.x), \(position.y)), Size: (\(size.width) x \(size.height))\n\(addition)"
+    }
 }
