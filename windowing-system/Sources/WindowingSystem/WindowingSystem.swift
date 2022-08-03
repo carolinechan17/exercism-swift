@@ -35,5 +35,10 @@ class Window {
         self.size.resize(newWidth: width, newHeight: height)
     }
     
-    
+    func move(to position: Position){
+        let x: Int = max(0, min(screenSize.width - size.width, position.x))
+        let y: Int = max(0, min(screenSize.height - size.height, position.y))
+        
+        self.position.moveTo(newX: x, newY: y)
+    }
 }
