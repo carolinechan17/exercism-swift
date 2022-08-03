@@ -21,3 +21,10 @@ struct Size {
 }
 
 // TODO: Define the Window class
+class Window {
+    var title: String = "New Window"
+    var screenSize: Size = Size(width: 800, height: 600)
+    var size: Size = Size()
+    var position: Position = Position()
+    var contents: String? = nil
+}
