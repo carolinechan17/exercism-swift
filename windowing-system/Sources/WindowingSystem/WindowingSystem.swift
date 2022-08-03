@@ -59,7 +59,7 @@ class Window {
             addition = contents!
         }
         
-        return "\(title)\nPosition: (\(position.x), \(position.y)), Size: (\(size.width) x \(size.height))\n\(addition)"
+        return "\(title)\nPosition: (\(position.x), \(position.y)), Size: (\(size.width) x \(size.height))\n\(addition)\n"
     }
 }
 
