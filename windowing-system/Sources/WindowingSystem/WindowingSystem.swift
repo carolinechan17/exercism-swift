@@ -27,4 +27,13 @@ class Window {
     var size: Size = Size()
     var position: Position = Position()
     var contents: String? = nil
+    
+    func resize(to size: Size){
+        let width: Int = max(1, min(screenSize.width - position.x, size.width))
+        let height: Int = max(1, min(screenSize.height - position.y, size.height))
+        
+        self.size.resize(newWidth: width, newHeight: height)
+    }
+    
+    
 }
