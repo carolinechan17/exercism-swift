@@ -62,3 +62,12 @@ class Window {
         return "\(title)\nPosition: (\(position.x), \(position.y)), Size: (\(size.width) x \(size.height))\n\(addition)"
     }
 }
+
+var mainWindow: Window {
+    let window: Window = Window()
+    window.update(title: "Main Window")
+    window.resize(to: Size(width: 400, height: 300))
+    window.move(to: Position(x: 100, y: 100))
+    window.update(text: "This is the main window")
+    return window
+}
