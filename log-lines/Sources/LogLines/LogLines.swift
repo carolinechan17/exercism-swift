@@ -24,4 +24,24 @@ enum LogLevel {
             self = .unknown
         }
     }
+    
+    //MARK: shortFormat method to shortened the log line
+    func shortFormat (message: String) -> String {
+        switch self {
+        case .trace:
+            return "0:\(message)"
+        case .debug:
+            return "1:\(message)"
+        case .info:
+            return "4:\(message)"
+        case .warning:
+            return "5:\(message)"
+        case .error:
+            return "6:\(message)"
+        case .fatal:
+            return "7:\(message)"
+        case .unknown:
+            return "42:\(message)"
+        }
+    }
 }
