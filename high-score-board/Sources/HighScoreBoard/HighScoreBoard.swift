@@ -4,16 +4,17 @@ func newScoreBoard() -> [String: Int] {
     return newHighScore
 }
 
+//MARK: Add players to the high score dictionary
 func addPlayer(_ scores: inout [String: Int], _ name: String, _ score: Int = 0) {
-  fatalError("addPlayer not implemented - please add implementation here")
+    scores[name] = score
 }
 
 func removePlayer(_ scores: inout [String: Int], _ name: String) {
-  fatalError("newScoreBoard not implemented - please add implementation here")
+    
 }
 
 func resetScore(_ scores: inout [String: Int], _ name: String) {
-  fatalError("removePlayer not implemented - please add implementation here")
+    
 }
 
 func updateScore(_ scores: inout [String: Int], _ name: String, _ delta: Int) {
