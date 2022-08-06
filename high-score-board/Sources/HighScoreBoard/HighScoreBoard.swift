@@ -1,5 +1,7 @@
+//MARK: Define a new high score dictionary
 func newScoreBoard() -> [String: Int] {
-  fatalError("newScoreBoard not implemented - please add implementation here")
+    var newHighScore : [String: Int] = [:]
+    return newHighScore
 }
 
 func addPlayer(_ scores: inout [String: Int], _ name: String, _ score: Int = 0) {
