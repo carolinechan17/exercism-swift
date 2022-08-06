@@ -28,10 +28,18 @@ func updateScore(_ scores: inout [String: Int], _ name: String, _ delta: Int) {
     scores[name] = scores[name]! + delta
 }
 
+//MARK: Get a list of players with scores ordered by player name
 func orderByPlayers(_ scores: [String: Int]) -> [(String, Int)] {
-  fatalError("orderByPlayers not implemented - please add implementation here")
+    func order(_ left: (String, Int), _ right: (String, Int)) -> Bool {
+        let leftString = left.0
+        let rightString = right.0
+        return leftString < rightString
+    }
+    
+    let sortedScores = scores.sorted(by: order)
+    return sortedScores
 }
 
 func orderByScores(_ scores: [String: Int]) -> [(String, Int)] {
-  fatalError("orderByScores not implemented - please add implementation here")
+
 }
