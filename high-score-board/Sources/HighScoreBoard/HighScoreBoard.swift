@@ -23,8 +23,9 @@ func resetScore(_ scores: inout [String: Int], _ name: String) {
     }
 }
 
+//MARK: Update a player's score
 func updateScore(_ scores: inout [String: Int], _ name: String, _ delta: Int) {
-  fatalError("updateScore not implemented - please add implementation here")
+    scores[name] = scores[name]! + delta
 }
 
 func orderByPlayers(_ scores: [String: Int]) -> [(String, Int)] {
