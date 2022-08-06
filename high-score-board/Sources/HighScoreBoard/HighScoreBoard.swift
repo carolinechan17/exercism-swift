@@ -40,6 +40,14 @@ func orderByPlayers(_ scores: [String: Int]) -> [(String, Int)] {
     return sortedScores
 }
 
+//MARK: Get a list of players ordered by player score in decreasing order
 func orderByScores(_ scores: [String: Int]) -> [(String, Int)] {
-
+    func order (_ left: (String, Int), _ right: (String, Int)) -> Bool {
+        let leftScore = left.1
+        let rightScore = right.1
+        return leftScore > rightScore
+    }
+    
+    let sortedScores = scores.sorted(by: order)
+    return sortedScores
 }
