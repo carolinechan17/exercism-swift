@@ -1,6 +1,6 @@
 //MARK: Define a new high score dictionary
 func newScoreBoard() -> [String: Int] {
-    var newHighScore : [String: Int] = [:]
+    let newHighScore : [String: Int] = [:]
     return newHighScore
 }
 
