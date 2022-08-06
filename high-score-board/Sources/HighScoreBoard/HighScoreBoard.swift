@@ -9,8 +9,11 @@ func addPlayer(_ scores: inout [String: Int], _ name: String, _ score: Int = 0) 
     scores[name] = score
 }
 
+//MARK: Remove players from the score dictionary
 func removePlayer(_ scores: inout [String: Int], _ name: String) {
-    
+    if scores[name] != nil {
+        scores[name] = nil
+    }
 }
 
 func resetScore(_ scores: inout [String: Int], _ name: String) {
