@@ -16,8 +16,11 @@ func removePlayer(_ scores: inout [String: Int], _ name: String) {
     }
 }
 
+//MARK: Reset a player's score
 func resetScore(_ scores: inout [String: Int], _ name: String) {
-    
+    if scores[name] != nil {
+        scores[name] = 0
+    }
 }
 
 func updateScore(_ scores: inout [String: Int], _ name: String, _ delta: Int) {
