@@ -1,12 +1,16 @@
 //let flip: (String, String, String) -> (String, String, String) = TODO: Please define the flip closure
 //MARK: Write a closure to flip two wires
+
+import Foundation
 let flip = {(a: String, b: String, c: String) -> (String, String, String) in
-    let arrayOfWires: [String] = [a, b, c]
-    let sortedArrayOfWires: [String] = arrayOfWires.sorted(by: { (s1: String, s2: String) -> Bool in s1 > s2})
-    return (sortedArrayOfWires[0], sortedArrayOfWires[1], sortedArrayOfWires[2])
+    (b, a, c)
 }
 
 //let rotate: (String, String, String) -> (String, String, String) = TODO: Please define the stopAtOne closure
+//MARK: Write a closure to rotate the wires
+let rotate = {(a: String, b: String, c: String) -> (String, String, String) in
+    (b, c, a)
+}
 
 
 func makeShuffle(
