@@ -1,4 +1,4 @@
-import XCTest
+ import XCTest
 @testable import Leap
 
 class LeapTests: XCTestCase {
