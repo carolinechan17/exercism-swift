@@ -18,4 +18,14 @@ struct Grains {
             return UInt64(pow(Double(2), Double(num-1)))
         }
     }
+    
+    //MARK: Variable to return the total of grains on chessboard
+    static var total: UInt64 {
+        var result : UInt64 = 0
+        for i in 1...64 {
+            result += UInt64(pow(Double(2), Double(i-1)))
+        }
+        
+        return result
+    }
 }
